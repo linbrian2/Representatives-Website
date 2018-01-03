@@ -31,93 +31,41 @@ You are now ready to run the website and explore it!
 
 #### `main.handlebars` [5 pts.]
 
-Add a navigation bar to `main.handlebars` so there is one present in all pages rendered. The requirements are the following:
+Add a navigation bar to `main.handlebars` so there is one present in all pages rendered.
 
-- This navigation bar must have four link (`<a>`) elements **inline** with one another. [1 pt.]
+- This navigation bar has four inline links:
 
-These elements are all links to other pages and are as follows:
-
-- States: links to `/` [1 pt.]
-- Democracts: links to `/party/:partyname` for Democrats [1 pt.]
-- Republicans: links to `/party/:partyname` for Republicans [1 pt.]
-- Representatives: links to `/rep` [1 pt.]
-
-You can find examples of a nav bar in the picture examples below. 
-
-Please note that for the sake of this example, we have done this with only HTML. If you would like to practice your CSS (which you should), please feel free to add some!
+- States: links to `/`
+- Democracts: links to `/party/:partyname` for Democrats
+- Republicans: links to `/party/:partyname` for Republicans
+- Representatives: links to `/rep`
 
 #### `person.handlebars` [8 pts.]
 
-This template is rendered when the `/rep/:repid` endpoint is hit. On this page, you must display the following information:
-- Full name [1 pt.]
-- State (abbreviation or full name) that links to the `/state/:statename` page for that state. [2 pts.]
-- Birthday [1 pt.]
-- Description (can be found in `data.json`) [1 pt.]
-- The representative's party. This text must link to the `/party/:partyname` endpoint for that party. [2 pts.]
-- The text "Website" that links to the representative's website [1 pt.]
-
-Example:
-
-![Imgur](http://i.imgur.com/eDo97vK.png)
+This template is rendered when the `/rep/:repid` endpoint is hit. On this page, the following information is displayed.
+- Full name
+- State that links to the `/state/:statename` page for that state.
+- Birthday
+- Description
+- The representative's party linking to the `/party/:partyname` endpoint for that party
+- A link to the representative's website
 
 #### `representatives.handlebars` [5 pts.]
 
-This template is rendered when either the `/party/:partyname` or `/rep` endpoints are hit. This page must display the following:
-- The party that is being displayed (can either be "Democrats", "Republicans", or "All Representatives") as a header [1 pts.]
-- A list of all the people in that particular group where each name is linked to that representative's `/rep/:repid` page [2 pts.]
-- Next to each name should also be the state (full name or abbreviation), and this text should link to the relevant `/state/:statename` page [2 pts.]
-
-Example:
-
-![Imgur](http://i.imgur.com/3laAXxE.png)
+This template is rendered when either the `/party/:partyname` or `/rep` endpoints are hit. This page displays the following:
+- The party that is being displayed
+- A list of all the people in that particular group where each name is linked to that representative's `/rep/:repid` page
+- Next to each name should also be the state, and this text should link to the relevant `/state/:statename` page
 
 #### `state.handlebars` [4 pts.]
 
-This template is rendered when the `/state/:statename` endpoint is hit. The following should be displayed:
-- The name of the state in an <ht> tag [1 pt.]
-- All of the representatives from that state. However, the representatives must be separated into whether they are democrats or republicans by an `<h2>` label. Please note that if there is a state with no representative from a particular party, that party header should not even be displayed. For example, because there are no democratic representatives from Oklahoma, the page should only have a "Republicans" header, following by the representatives. [3 pts.]
-
-Examples:
-
-Utah (Republican)
-
-![Imgur](http://i.imgur.com/p4orSw9.png)
-
-Alabama (Bipartisan)
-
-![Imgur](http://i.imgur.com/1UQm3kI.png)
+This template is rendered when the `/state/:statename` endpoint is hit. The following is displayed:
+- The name of the state
+- All of the representatives from that state. The representatives are separated depending on whether they are Democrats or Republicans. If a member of the opposite party does not exist in a state, they and the party text simply will not show up.
 
 #### `allstates.handlebars` [2 pts.]
 
-This template is rendered when the `/` endpoint is hit. This page should display a list of all 50 states (full names) where each name links to the respective `/state/:statename` page. [2 pts.]
-
-![Imgur](http://i.imgur.com/bqtjXIi.png)
-
-### Endpoints
-
-All endpoints are `GET` requests. Please notice that you cannot simply pass in the information in `data.json` to these endpoints. Some preprocessing is necessary. For all of the endpoints, it is up to you to decide what information must be passed into the template file. These endpoints are not going to be graded as implementations will vary. We are going to be looking at what the endpoints show in our browsers and are not grading for efficiency. 
-
-Here is a list of the endpoints and what they must render.
-
-1.  `/` 
-    
-  This endpoint must render `allstates.handlebars`. 
-
-2. `/party/:partyname`
-
-  This endpoint must render `representatives.handlebars`. Do keep in mind that `/rep` will also be rendering the same template when you are deciding what to pass into the render statement. 
-
-3. `/state/:statename`
-
-  This endpoint must render `state.handlebars`.
-
-4. `/rep`
-
-  This endpoint must render `representatives.handlebars`.
-
-5. `/rep/:repid`
-
-  This endpoint must render `person.handlebars`. Use the `.person.id` field from the sample object below as the `:repid` here, as we can guarantee these are unique. 
+This template is rendered when the `/` endpoint is hit. This page displays a list of all 50 states, where each name links to the respective `/state/:statename` page.
 
 ## Credits
 
