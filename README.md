@@ -29,6 +29,8 @@ You are now ready to run the website and explore it!
 
 ### Templating
 
+Templating allows me to create dynamic web pages. I am able to create a skeleton of what the HTML pages should look like, then control the content however I want. Generation is through the templating engine handlebars. The following are the files I have included to help generate webpages along with HTML and basic CSS.
+
 #### `main.handlebars` [5 pts.]
 
 Add a navigation bar to `main.handlebars` so there is one present in all pages rendered.
