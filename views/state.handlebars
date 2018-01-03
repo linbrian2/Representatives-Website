@@ -1,0 +1,15 @@
+<h4><b>{{state}}</b></h4>
+
+{{#if demsExist}}
+	<h1><b>Democrats</b></h1>
+    {{#each dems}}
+		<ul><p><a href = "/rep/{{id}}">{{this.name}}</a></p></ul>
+	{{/each}}
+{{/if}}
+
+{{#if repsExist}}
+	<h1><b>Republicans</b></h1>
+    {{#each reps}}
+		<ul><p><a href = "/rep/{{id}}">{{this.name}}</a></p></ul>
+	{{/each}}
+{{/if}}

@@ -1,0 +1,8 @@
+<h1><b>{{party}}</b></h1>
+
+<ol>
+{{#each entries}}
+	<li><p><a href= "/rep/{{this.repid}}">{{this.name}}</a>: <a href= "/state/{{this.stateName}}">{{this.state}}</a></p></li>
+{{/each}}
+</ol>
+<ol>
