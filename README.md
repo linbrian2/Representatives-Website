@@ -15,15 +15,15 @@ Download and install Node.js from: `https://nodejs.org/en/`
 
 Clone this repository and navigate to the directory. As a Windows user, I prefer doing this by opening the command prompt and navigating to the project folder.
 
-From the command prompt install the dependencies:
+From the command prompt install the required dependencies:
 
-1. run `npm install`
-
+1. Run `npm install`
 2. Run `npm install express`. 
-
 3. Run `npm install underscore`.
+4. Run `npm install morgan`.
+5. Run `npm install express-handlebars`.
 
-You are now ready to run the website and explore it!
+You are now ready to run the website and explore it! Use the command `node index.js`. It will listen on port 3000. You can visit the website by going to your internet browser, and going to the domain "localhost:3000".
 
 ## Specifications 
 
