@@ -31,7 +31,7 @@ You are now ready to run the website and explore it!
 
 Templating allows me to create dynamic web pages. I am able to create a skeleton of what the HTML pages should look like, then control the content however I want. Generation is through the templating engine handlebars. The following are the files I have included to help generate webpages along with HTML and basic CSS.
 
-#### `main.handlebars` [5 pts.]
+#### `main.handlebars`
 
 Add a navigation bar to `main.handlebars` so there is one present in all pages rendered.
 
@@ -42,7 +42,7 @@ Add a navigation bar to `main.handlebars` so there is one present in all pages r
 - Republicans: links to `/party/:partyname` for Republicans
 - Representatives: links to `/rep`
 
-#### `person.handlebars` [8 pts.]
+#### `person.handlebars`
 
 This template is rendered when the `/rep/:repid` endpoint is hit. On this page, the following information is displayed.
 - Full name
@@ -52,20 +52,20 @@ This template is rendered when the `/rep/:repid` endpoint is hit. On this page, 
 - The representative's party linking to the `/party/:partyname` endpoint for that party
 - A link to the representative's website
 
-#### `representatives.handlebars` [5 pts.]
+#### `representatives.handlebars`
 
 This template is rendered when either the `/party/:partyname` or `/rep` endpoints are hit. This page displays the following:
 - The party that is being displayed
 - A list of all the people in that particular group where each name is linked to that representative's `/rep/:repid` page
 - Next to each name should also be the state, and this text should link to the relevant `/state/:statename` page
 
-#### `state.handlebars` [4 pts.]
+#### `state.handlebars`
 
 This template is rendered when the `/state/:statename` endpoint is hit. The following is displayed:
 - The name of the state
 - All of the representatives from that state. The representatives are separated depending on whether they are Democrats or Republicans. If a member of the opposite party does not exist in a state, they and the party text simply will not show up.
 
-#### `allstates.handlebars` [2 pts.]
+#### `allstates.handlebars`
 
 This template is rendered when the `/` endpoint is hit. This page displays a list of all 50 states, where each name links to the respective `/state/:statename` page.
 
